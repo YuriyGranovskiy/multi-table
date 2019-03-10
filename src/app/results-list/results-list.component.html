@@ -1,12 +1,25 @@
-<ul>
-  <li 
-    *ngFor="let result of exampleResults; let i = index" [ngClass]="{'correctResult': result.isCorrect && !result.isLong, 'correctAndLongResult': result.isCorrect && result.isLong, 'incorrectResult': !result.isCorrect}" >
-    <span>{{ i + 1 }}.)</span>
-    <span>{{ result.leftFunctor }}</span>
-    <span>*</span>
-    <span>{{ result.rightFunctor }}</span>
-    <span>=</span>
-    <span>{{ result.result }}</span>
-    <span>{{ result.getPrettyTime() }}</span>
-  </li>
-</ul>
+<table>
+  <thead>
+    <th>Номер</th>
+    <th>Пример</th>
+    <th>Результат</th>
+    <th>Время</th>
+  </thead>
+  <tbody>
+    <tr 
+      *ngFor="let result of exampleResults; let i = index"
+      [ngClass]="{'correctResult': result.isCorrect && !result.isLong, 'correctAndLongResult': result.isCorrect && result.isLong, 'incorrectResult': !result.isCorrect}" >
+      <td>{{ i + 1 }}.)</td>
+      <td>
+        <span>{{ result.leftFunctor }}</span>
+        <span>*</span>
+        <span>{{ result.rightFunctor }}</span>
+        <span>=</span>        
+      </td>
+      <td>
+        <span>{{ result.result }}</span>
+      </td>
+      <td>{{ result.getPrettyTime() }}</td>
+    </tr>
+  </tbody>
+</table>
