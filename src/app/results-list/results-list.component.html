@@ -1,0 +1,12 @@
+<ul>
+  <li 
+    *ngFor="let result of exampleResults; let i = index" [ngClass]="{'correctResult': result.isCorrect && !result.isLong, 'correctAndLongResult': result.isCorrect && result.isLong, 'incorrectResult': !result.isCorrect}" >
+    <span>{{ i + 1 }}.)</span>
+    <span>{{ result.leftFunctor }}</span>
+    <span>*</span>
+    <span>{{ result.rightFunctor }}</span>
+    <span>=</span>
+    <span>{{ result.result }}</span>
+    <span>{{ result.getPrettyTime() }}</span>
+  </li>
+</ul>

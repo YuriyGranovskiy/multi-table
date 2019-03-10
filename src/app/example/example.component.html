@@ -1,0 +1,11 @@
+<div (keyup.enter)="count(result.value);  result.value=''">
+  <ul>
+    <li>
+      <span>{{ example.leftFunctor }}</span>
+      <span>X</span>
+      <span>{{ example.rightFunctor }}</span>
+    </li>
+  </ul>
+  <input type="number" #result />
+  <button (click)="count(result.value); result.value=''">Считать</button>
+</div>

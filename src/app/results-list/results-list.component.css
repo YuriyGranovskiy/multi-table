@@ -1,0 +1,30 @@
+ul {
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+li {
+    text-align: left;
+    padding: 0px;
+    text-decoration: none;
+    font-size: 1em
+}
+
+span {
+    margin: 15px;
+}
+
+.incorrectResult {
+    color: red;
+}
+
+.correctResult {
+    color: green;
+}
+
+.correctAndLongResult {
+    color: orange;
+}
