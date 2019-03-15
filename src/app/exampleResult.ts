@@ -14,11 +14,4 @@ export class ExampleResult {
     isCorrect: boolean;
     time: number;
     isLong: boolean;
-
-    getPrettyTime() : string {
-        let seconds = Math.floor(this.time / 1000);
-        let milliseconds = ("00" + (this.time % 1000)).slice(-3);
-        
-        return seconds + "s " + milliseconds + "ms";
-    }
 }
