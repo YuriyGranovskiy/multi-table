@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { ExampleResultsService } from '../example-results.service';
-import { ExampleResult } from '../shared/exampleResult';
+import { TaskResultsService } from '../task-results.service';
+import { TaskResult } from '../shared/taskResult';
 
 @Component({
-  selector: 'app-results-list',
+  selector: 'mt-results-list',
   templateUrl: './results-list.component.html',
   styleUrls: ['./results-list.component.css']
 })
 export class ResultsListComponent implements OnInit {
-  exampleResults: ExampleResult[];
-  constructor(private exampleResultsService: ExampleResultsService) { }
+  taskResults: TaskResult[];
+  constructor(private taskResultsService: TaskResultsService) { }
 
   ngOnInit() {
-    this.exampleResults = this.exampleResultsService.getResults();
+    this.taskResults = this.taskResultsService.getResults();
   }
 }

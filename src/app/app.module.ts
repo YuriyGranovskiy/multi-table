@@ -2,19 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ExampleComponent } from './example/example.component';
+import { TaskComponent } from './task/task.component';
 import { ResultsListComponent } from './results-list/results-list.component';
 import { MsAsPrettyTimePipe } from './shared/ms-as-pretty-time.pipe';
 import { StartComponent } from './start/start.component';
 import { AppRoutingModule } from './app-routing.module';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExampleComponent,
+    TaskComponent,
     ResultsListComponent,
     MsAsPrettyTimePipe,
-    StartComponent
+    StartComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

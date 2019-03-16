@@ -1,4 +1,4 @@
-export class ExampleResult {
+export class TaskResult {
     constructor(left: number, right: number, result: number, time: number){
         this.leftFunctor = left;
         this.rightFunctor = right;

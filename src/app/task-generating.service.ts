@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Example } from './shared/example';
+import { Task } from './shared/task';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ExamplesService {
+export class TaskGeneratingService {
 
   constructor() { }
 
@@ -12,7 +12,7 @@ export class ExamplesService {
     return (Math.floor((Math.random() * (max - min + 1)) + min));
   }
 
-  getNext(): Example {
-    return new Example(this.getRandomInt(2, 4), this.getRandomInt(2, 9));
+  getNext(): Task {
+    return new Task(this.getRandomInt(3, 4), this.getRandomInt(3, 9));
   }
 }

@@ -1,4 +1,4 @@
-<table *ngIf="exampleResults && exampleResults.length">
+<table *ngIf="taskResults && taskResults.length">
   <thead>
     <th>Номер</th>
     <th>Пример</th>
@@ -7,7 +7,7 @@
   </thead>
   <tbody>
     <tr 
-      *ngFor="let result of exampleResults; let i = index"
+      *ngFor="let result of taskResults; let i = index"
       [ngClass]="{'correctResult': result.isCorrect && !result.isLong, 'correctAndLongResult': result.isCorrect && result.isLong, 'incorrectResult': !result.isCorrect}" >
       <td>{{ i + 1 }}.)</td>
       <td>
