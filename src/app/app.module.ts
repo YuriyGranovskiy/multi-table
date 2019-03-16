@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ExampleComponent } from './example/example.component';
 import { ResultsListComponent } from './results-list/results-list.component';
-import { MsAsPrettyTimePipe } from './ms-as-pretty-time.pipe';
+import { MsAsPrettyTimePipe } from './shared/ms-as-pretty-time.pipe';
 
 @NgModule({
   declarations: [

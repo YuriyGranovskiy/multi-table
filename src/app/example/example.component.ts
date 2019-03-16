@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Example } from '../example';
+import { Example } from '../shared/example';
 import { ExamplesService } from '../examples.service';
-import { ExampleResult } from '../exampleResult';
+import { ExampleResult } from '../shared/exampleResult';
 import { ExampleResultsService } from '../example-results.service';
 
 @Component({
