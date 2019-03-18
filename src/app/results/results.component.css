@@ -1,0 +1,11 @@
+li.incorrectResult {
+    color: red;
+}
+
+li.correctResult {
+    color: green;
+}
+
+li.correctAndLongResult {
+    color: orange;
+}

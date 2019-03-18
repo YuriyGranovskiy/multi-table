@@ -1,0 +1,7 @@
+<img *ngIf="canShowRapuntsel" src="/assets/rapuntsel.gif" />
+<ul>
+  <li class="correctResult">Правильных: {{ correctCount }}</li>
+  <li class="correctAndLongResult" >Медленных: {{ correctAndLongCount }}</li>
+  <li class="incorrectResult">Неправильных: {{ incorrectCount }}</li>
+</ul>
+<button routerLink="/test">Ещё раз</button>

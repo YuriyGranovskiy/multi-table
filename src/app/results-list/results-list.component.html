@@ -1,3 +1,4 @@
+<button routerLink="/results" *ngIf="taskResultsService.testFinished" >Результаты</button>
 <table *ngIf="taskResults && taskResults.length">
   <thead>
     <th>Номер</th>

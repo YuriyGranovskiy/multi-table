@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskResultsService } from '../task-results.service';
 
 @Component({
   selector: 'mt-test',
@@ -6,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-  taksCount: number = 30;
-  constructor() { }
+  constructor(private taskResultsService: TaskResultsService) { }
 
   ngOnInit() {
+    this.taskResultsService.flush();
   }
 
 }

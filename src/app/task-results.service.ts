@@ -6,6 +6,8 @@ import { TaskResult } from './shared/taskResult';
 })
 export class TaskResultsService {
   taskResults: TaskResult[] = [];
+  testLength: number = 20;
+  testFinished: boolean = false;
 
   constructor() { }
 
@@ -13,11 +15,22 @@ export class TaskResultsService {
     return this.taskResults;
   }
 
+  flush(): void {
+    this.taskResults.length = 0;
+    this.testFinished = false;
+  }
+
   add(taskResult: TaskResult){
-    if(this.taskResults.length < 30) {
+    if(this.taskResults.length < this.testLength) {
       this.taskResults.push(taskResult);
+      if((this.taskResults.length < this.testLength)) {
+        this.testFinished = false;
+      }
+      else {
+        this.testFinished = true;
+      }
     } else {          
-      alert("Тест окончен!");
+      this.testFinished = true;
     }
   }
 }
